@@ -1,0 +1,9 @@
+C:\Users\programador2\source\repos\ServicioWinSUNAT\ServicioWinSUNAT\bin\Debug\ServicioWinSUNAT.exe.config
+C:\Users\programador2\source\repos\ServicioWinSUNAT\ServicioWinSUNAT\bin\Debug\ServicioWinSUNAT.exe
+C:\Users\programador2\source\repos\ServicioWinSUNAT\ServicioWinSUNAT\bin\Debug\ServicioWinSUNAT.pdb
+C:\Users\programador2\source\repos\ServicioWinSUNAT\ServicioWinSUNAT\obj\Debug\ServicioWinSUNAT.csproj.CoreCompileInputs.cache
+C:\Users\programador2\source\repos\ServicioWinSUNAT\ServicioWinSUNAT\obj\Debug\ServicioWinSUNAT.exe
+C:\Users\programador2\source\repos\ServicioWinSUNAT\ServicioWinSUNAT\obj\Debug\ServicioWinSUNAT.pdb
+C:\Users\programador2\source\repos\ServicioWinSUNAT\ServicioWinSUNAT\obj\Debug\ServicioWinSUNAT.ProjectInstaller.resources
+C:\Users\programador2\source\repos\ServicioWinSUNAT\ServicioWinSUNAT\obj\Debug\ServicioWinSUNAT.csproj.GenerateResource.cache
+C:\Users\programador2\source\repos\ServicioWinSUNAT\ServicioWinSUNAT\obj\Debug\ServicioWinSUNAT.ServicioWinSUNAT.resources
