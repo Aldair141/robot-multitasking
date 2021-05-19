@@ -78,7 +78,7 @@ namespace ServicioWinSUNAT
         private void InsertarDataSUNAT()
         {
             string[] registrosSunat = File.ReadAllLines("C:\\padron_reducido_ruc.txt");
-            Tb_ClienteBE tb_ClienteBE;
+            TbClienteSUNAT clienteSUNAT;
 
             int insertados = 0;
             int noinsertados = 0;
@@ -87,8 +87,8 @@ namespace ServicioWinSUNAT
             if (registrosSunat.Length > 1) //Sin contar la cabecera
             {
                 procesandoSUNAT = true;
-                for (int i = 1; i < registrosSunat.Length; i++)
-                //for (int i = 1; i < 10; i++)
+                //for (int i = 1; i < registrosSunat.Length; i++)
+                for (int i = 1; i < 10; i++)
                 {
                     if (!procesandoSUNAT)
                     {
@@ -96,18 +96,30 @@ namespace ServicioWinSUNAT
                         break;
                     }
 
-                    string[] datos = registrosSunat[i].Split('|');
-                    tb_ClienteBE = new Tb_ClienteBE();
-                    tb_ClienteBE.nmruc = datos[0];
-                    tb_ClienteBE.ctactename = datos[1];
-                    tb_ClienteBE.docuidentid = "6";
-                    tb_ClienteBE.rubroid = "00";
+                    string[] lineContent = registrosSunat[i].Split('|');
 
                     try
                     {
-                        if (dataDA.Get(tb_ClienteBE) == null)
+                        if (dataDA.Get(lineContent[0].Trim()) == null)
                         {
-                            if (dataDA.Create(tb_ClienteBE))
+                            clienteSUNAT = new TbClienteSUNAT();
+                            clienteSUNAT.ruc = lineContent[0];
+                            clienteSUNAT.razonSocial = lineContent[1];
+                            clienteSUNAT.estadoContribuyente = lineContent[2];
+                            clienteSUNAT.condicionDomicilio = lineContent[3];
+                            clienteSUNAT.ubigeo = lineContent[4];
+                            clienteSUNAT.tipoVia = lineContent[5];
+                            clienteSUNAT.nombreVia = lineContent[6];
+                            clienteSUNAT.codigoZona = lineContent[7];
+                            clienteSUNAT.tipoZona = lineContent[8];
+                            clienteSUNAT.numero = lineContent[9];
+                            clienteSUNAT.interior = lineContent[10];
+                            clienteSUNAT.lote = lineContent[11];
+                            clienteSUNAT.departamento = lineContent[12];
+                            clienteSUNAT.manzana = lineContent[13];
+                            clienteSUNAT.kilometro = lineContent[14];
+
+                            if (dataDA.Create(clienteSUNAT))
                             {
                                 insertados++;
                             }
@@ -125,6 +137,37 @@ namespace ServicioWinSUNAT
                     {
                         eventosSistema.WriteEntry($"Error: {ex.Message}");
                     }
+
+                    
+
+                    //tb_ClienteBE = new Tb_ClienteBE();
+                    //tb_ClienteBE.nmruc = datos[0];
+                    //tb_ClienteBE.ctactename = datos[1];
+                    //tb_ClienteBE.docuidentid = "6";
+                    //tb_ClienteBE.rubroid = "00";
+
+                    //try
+                    //{
+                    //    if (dataDA.Get(tb_ClienteBE) == null)
+                    //    {
+                    //        if (dataDA.Create(tb_ClienteBE))
+                    //        {
+                    //            insertados++;
+                    //        }
+                    //        else
+                    //        {
+                    //            noinsertados++;
+                    //        }
+                    //    }
+                    //    else
+                    //    {
+                    //        existentes++;
+                    //    }
+                    //}
+                    //catch (Exception ex)
+                    //{
+                    //    eventosSistema.WriteEntry($"Error: {ex.Message}");
+                    //}
                 }
             }
             eventosSistema.WriteEntry($"{insertados} registros insertados.\n{noinsertados} registros no se pudieron insertar.\n{existentes} registros ya existen.");

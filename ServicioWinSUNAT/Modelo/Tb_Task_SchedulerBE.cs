@@ -14,5 +14,6 @@ namespace ServicioWinSUNAT.Modelo
         public TimeSpan TaskHour { get; set; }
         public Nullable<DateTime> TaskLastDate { get; set; }
         public bool TaskStatus { get; set; }
+        public int TaskNextDay { get; set; }
     }
 }

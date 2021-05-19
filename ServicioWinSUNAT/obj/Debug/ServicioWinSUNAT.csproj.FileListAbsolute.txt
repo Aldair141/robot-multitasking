@@ -7,3 +7,4 @@ C:\Users\programador2\source\repos\ServicioWinSUNAT\ServicioWinSUNAT\obj\Debug\S
 C:\Users\programador2\source\repos\ServicioWinSUNAT\ServicioWinSUNAT\obj\Debug\ServicioWinSUNAT.ProjectInstaller.resources
 C:\Users\programador2\source\repos\ServicioWinSUNAT\ServicioWinSUNAT\obj\Debug\ServicioWinSUNAT.csproj.GenerateResource.cache
 C:\Users\programador2\source\repos\ServicioWinSUNAT\ServicioWinSUNAT\obj\Debug\ServicioWinSUNAT.ServicioWinSUNAT.resources
+C:\Users\programador2\source\repos\ServicioWinSUNAT\ServicioWinSUNAT\obj\Debug\ServicioWinSUNAT.csprojAssemblyReference.cache

@@ -48,6 +48,7 @@ namespace ServicioWinSUNAT.Servicio
                         objTask.TaskHour = lector.GetTimeSpan(3);
                         objTask.TaskLastDate = lector.GetDateTime(4);
                         objTask.TaskStatus = lector.GetBoolean(5);
+                        objTask.TaskNextDay = lector.GetInt32(6);
 
                         lista.Add(objTask);
                     }
